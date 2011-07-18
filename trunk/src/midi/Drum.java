@@ -7,37 +7,33 @@ public class Drum {
     public int velocity = 127;
     int counter16 = 0;
     boolean on = false;
-
     public Drum(int p, int i, int v) {
-        part = p;
-        instrument = i;
-        velocity = v;
+	part = p;
+	instrument = i;
+	velocity = v;
     }
-
     public Drum(int p, int i) {
-        part = p;
-        instrument = i;
+	part = p;
+	instrument = i;
     }
-
     public void play() {
-        Tools.openDrum(instrument, velocity);
-        counter16 = 0;
-        on = true;
+	Tools.openDrum(instrument, velocity);
+	counter16 = 0;
+	on = true;
     }
-
     public void stop() {
-        Tools.closeDrum(instrument);
-        counter16 = 0;
-        on = false;
+	Tools.closeDrum(instrument);
+	counter16 = 0;
+	on = false;
     }
-
     public void tick() {
-        if (on) {
-            counter16++;
-            if (counter16 / 16.0 > 1.0 / part) {
-                stop();
-            }
-        }
+	if (on) {
+	    counter16++;
+	    int pp = 16 / part;
+	    if (counter16 >= pp) {
+		stop();
+	    }
+	}
     }
     public static int d35_Acoustic_Bass_Drum = 35;
     public static int d36_Bass_Drum_1 = 36;
