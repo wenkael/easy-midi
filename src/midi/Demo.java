@@ -19,9 +19,15 @@ public class Demo extends JFrame{
                     .chord(new Chord(8).drum(hat).drum(bass)	.note(8, Note.p28_2_Mi, bassVoice))
                     .chord(new Chord(8).drum(hat).drum(bass)	.note(8, Note.p28_2_Mi, bassVoice))
                     .chord(new Chord(8).drum(hat).drum(snare)	.note(8, Note.p34_2_La_Diese, bassVoice))
-                    .chord(new Chord(8).drum(hat)				.note(8, Note.p35_2_Si, bassVoice));
-    Ticker ti = new Ticker(120, p1);    
-    Ticker gunSerie=new Ticker(150,new Phrase()
+                    .chord(new Chord(8).drum(hat)		.note(8, Note.p35_2_Si, bassVoice));
+    Ticker ti = new Ticker(120, p1){
+	public void onTick(long count) {
+	    if(count==0){
+		System.out.println("begin");
+		}
+	    }
+	};    
+    Ticker gunSerie=new Ticker(180,new Phrase()
             .chord(new Chord(8).note(bullet))
             .chord(new Chord(8).note(bullet))
             .chord(new Chord(8).note(bullet))
