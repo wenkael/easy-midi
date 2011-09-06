@@ -15,7 +15,7 @@ public class Ticker {
 	timer = new Timer(true);
 	phrase = p;
 	this.tempo = tempo;
-	delay16 = (int) (60000.0 / tempo / 4.0);
+	delay16 = (int) (10000.0 / tempo);
 	timer.schedule(new TimerTask() {
 	    @Override
 	    public void run() {

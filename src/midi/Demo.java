@@ -5,8 +5,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Demo extends JFrame{
-    int bassVoice=Note.i33_Electric_Bass_finger;
-    Drum hat=new Drum(4, Drum.d42_Closed_Hi_Hat,64);
+    int bassVoice=Note.i35_Fretless_Bass;
+    Drum hat=new Drum(4, Drum.d42_Closed_Hi_Hat,127);
     Drum snare=new Drum(4, Drum.d38_Acoustic_Snare);
     Drum bass=new Drum(4, Drum.d35_Acoustic_Bass_Drum);
     int guitarVoice=Note.i30_Distortion_Guitar;
@@ -23,7 +23,7 @@ public class Demo extends JFrame{
     Ticker ti = new Ticker(120, p1){
 	public void onTick(long count) {
 	    if(count==0){
-		System.out.println("begin");
+		//System.out.println("begin");
 		}
 	    }
 	};    
