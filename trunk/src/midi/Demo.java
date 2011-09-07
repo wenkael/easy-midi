@@ -1,6 +1,7 @@
 package midi;
 
 import javax.swing.*;
+import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -23,7 +24,7 @@ public class Demo extends JFrame{
     Ticker ti = new Ticker(120, p1){
 	public void onTick(long count) {
 	    if(count==0){
-		//System.out.println("begin");
+		System.out.println("begin "+new Date());
 		}
 	    }
 	};    
